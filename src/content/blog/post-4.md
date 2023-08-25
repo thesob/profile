@@ -1,13 +1,16 @@
 ---
-title: My Fourth Blog Post
-author: Astro Learner
-description: 'This post will show up on its own!'
+title: 'Callbacks in Javascript'
+author: 'Patricio Sobrado'
+description: 'Avoiding the callback hell'
 image:
   url: 'https://docs.astro.build/default-og-image.png'
   alt: 'The word “astro” against an illustration of planets and stars.'
-pubDate: 2023-08-22
-heroImage: "/post_img.webp"
-tags: ['astro', 'successes']
+pubDate: 2023-03-22
+heroImage: "/images/learn-js.jpeg"
+tags: ['javascript', 'freeeducation']
 ---
 
-This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.
+Callbacks represent an inversion of control when dealing with asynchronous code: you let the called async function call your callbacks when ready or failed. Inverting the callback pattern is actually an inversion of inversion, or an uninversion of control, which restores control back to the calling code. Doing so, you don't need to pass the callbacks to the called function, and thus avoid the insane "callback hell", when multiple callbacks are nested within each other, making the code difficult to read and maintain.
+
+In JavaScript, promises were introduced as a native way to handle asynchronous code in a clean and organized way, thus creating more maintainable code when dealing with asynchronous operations. They provide a way to manage the result of an asynchronous operation once it's completed, and allow for chaining operations, handling errors centrally, and running multiple operations in parallel.
+Recommend this source (You don't know JS), should you like to deep-dive into Promises. [You don't konw JS on Github](https://lnkd.in/e8UDyzaV)

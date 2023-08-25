@@ -2,31 +2,37 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import Greeting from '../components/Greeting';
+import Greeting from "../components/Greeting";
 
-const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 
 const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">
-      <Greeting client:load messages={['Hej', 'Bunā', 'Hola', 'Hi', 'Ciao']} />
-    </div>
+    <Greeting client:load messages={["Hej", "Bunā", "Hola", "Hi", "Ciao"]} />
     <div class="text-5xl font-bold">I'm Patricio Sobrado</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer, Manager and Musician</div>
+    <div class="text-3xl py-3 font-bold">
+      Software Engineer, Manager and Musician
+    </div>
     <div class="py-2">
       <text class="text-lg">
-        I am thrive when I'm part of change processes in complex environments and my heart beats stronger when I am able to motivate people to achieving goals they never thought possible.
-        Through the years, I have developed two professional careers simultaneously. At one hand, technical development within the IT field (programming, leading software development teams), and on the other hand, music creation, artist management and artist development.
-        When I am not working, I am willing to walk miles just to get a good piece of meal, and a tasty glass of wine, and at home I love to cook.
-        The one achievement I'm most proud of today is, my family.
-        Second to that is, being the founder and former leader of <a href="https://www.callerea.se" target="_blank">Calle Real from Sweden (with link).</a>
+        I'm a catalyst for change in intricate environments, fueled by my
+        passion for inspiring people to surpass their limits. My journey spans
+        programming, technical leadership in IT, music creation, and artist management.
+        Beyond work, I'm a culinary explorer and proud founder of <a
+        href="https://www.callerea.se"
+        target="_blank">Calle Real from Sweden (with link)</a>, driven by a love for innovation. I'm excited to channel my
+        diverse experiences into contributing to your team's dynamic vision. 
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/patriciosobrado" target="_blank"> Let's connect!</a>
+      <a class="btn" href="https://twitter.com/patriciosobrado" target="_blank">
+        Let's connect!</a
+      >
     </div>
   </div>
 
@@ -52,7 +58,7 @@ const last_posts = posts.slice(0, 3);
   <HorizontalCard
     title="Blog list"
     img="/blog_logo.png"
-    desc="A user authenticated blog list app to maintain and like blogs."
+    desc="A user authenticated fullstack blog list app to maintain and like blogs."
     url="#"
   />
 
