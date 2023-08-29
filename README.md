@@ -1,81 +1,20 @@
-# Astrofy | Personal Porfolio Website Template
+# Personal Porfolio Website
 
-![Astrofy | Personal Porfolio Website Template](public/social_img.png)
+Created this site starting with the [Astrofy](https://astrofy-template.netlify.app/) template. Astrofy is a free and open-source template for creating Personal Portfolio Website built with Astro and TailwindCSS. The great benefit of Astro is that it's fast, it contains very little javascript pushed to the browser, it's usage reminds very much of other frameworks such as React, Vue, and it can be easily integrated with components from these and other javascript frameworks.
 
-Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.
-
-## Demo
-
-View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
-
-## Installation
-
-Run the following command in your terminal
-
-```bash
-npm install
-```
-
-Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
-
-```bash
-npm run dev
-```
 
 ## Tech Stack
 
 - [Astro](https://astro.build)
 - [tailwindcss](https://tailwindcss.com/)
 - [DaisyUI](https://daisyui.com/)
-
-## Project Structure
-
-```php
-├── src/
-│   ├── components/
-│   │   ├── cv/
-│   │   │   ├── TimeLine
-│   │   ├── BaseHead.astro
-│   │   ├── Card.astro
-│   │   ├── Footer.astro
-│   │   ├── Header.astro
-│   │   └── HorizontalCard.astro
-│   │   └── SideBar.astro
-│   │   └── SideBarMenu.astro
-│   │   └── SideBarFooter.astro
-│   ├── content/
-│   │   ├── blog/
-│   │   │   ├── post1.md
-│   │   │   ├── post2.md
-│   │   │   └── post3.md
-│   │   ├── store/
-│   │   │   ├── item1.md
-│   │   │   ├── item2.md
-│   ├── layouts/
-│   │   └── BaseLayout.astro
-│   │   └── PostLayout.astro
-│   └── pages/
-│   │   ├── blog/
-│   │   │   ├── [...page].astro
-│   │   │   ├── [slug].astro
-│   │   └── cv.astro
-│   │   └── index.astro
-│   │   └── projects.astro
-│   │   └── rss.xml.js
-│   └── styles/
-│       └── global.css
-├── public/
-│   ├── favicon.svg
-│   └── social-image.png
-│   └── sprofile.jpg
-│   └── social_img.webp
-├── astro.config.mjs
-├── tailwind.config.cjs
-├── package.json
-└── tsconfig.json
-```
+- [Preact.js](https://preactjs.com)
 
 ### Components usage
+
+#### Interactive Components
+
+The home page shows on the top a button that changes hello word randomly on each click. It scrambles among 5 lanaguages, English, Spanish, Rumanian, Italian and Swedish, which happen to be the languages I speak. The component was made with Preact.
 
 #### Layout Components
 
@@ -96,7 +35,7 @@ To add a new page in the sidebar go to `SideBarMenu` component.
 
 ```
 
-**Note**: In order to change the sidebar menu's active item, you need to setup the prop `sideBarActiveItemID` in the `BaseLayout` componenet of your new page and add that id to the link in the `SideBarMenu`
+**Note**: In order to change the sidebar menu's active item, you need to setup the prop `sideBarActiveItemID` in the `BaseLayout` component of your new page and add that id to the link in the `SideBarMenu`
 
 #### TimeLine
 
@@ -121,25 +60,6 @@ URL" target="Optional link target (_blank default)" badge="Optional badge"
 tags={['Array','of','tags']} />
 ```
 
-#### HorizontalCard Shop Item
-
-This compoenet is already included in the Store layout of the template. In case you want to use it in other place this are the props.
-
-```html
-<HorizontalShopItem
-  title="Item Title"
-  img="imge_url"
-  desc="Item description"
-  pricing="current_price"
-  oldPricing="old_price"
-  checkoutUrl="external store checkout url"
-  badge="Optional badge"
-  url="item details url"
-  custom_link="Custom link url"
-  custom_link_label="Cutom link btn label"
-  target="Optional link target (_self default)"
-/>
-```
 
 ### Layouts
 
@@ -184,13 +104,13 @@ The `[page].astro` is the route to work with the paginated post list. You can ch
 
 The `[slug].astro` is the base route for every blog post, you can customize the page layout or behaviour, by default uses `content/blog` for content collection and `PostLayout` as layout.
 
-#### Shop
+#### Project
 
-Add your `md` item in the `/pages/shop/` folder.
+Add your `md` item in the `/pages/project/` folder.
 
 ##### [page].astro
 
-The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you incle inside this folder.
+The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The project page will render all `.md` files you include inside this folder.
 
 ##### Item format
 
@@ -201,14 +121,10 @@ Add code with this format in the top of each item file.
 title: "Demo Item 1"
 description: "Item description"
 heroImage: "Item img url"
-details: true // show or hide details btn
-custom_link_label: "Custom btn link label"
-custom_link: "Custom btn link"
+visit_link_label: "Visit btn link label"
+visit_link: "Visit btn link"
 pubDate: "Sep 15 2022"
-pricing: "$15"
-oldPricing: "$25.5"
 badge: "Featured"
-checkoutUrl: "https://checkouturl.com/"
 ---
 ```
 
@@ -220,7 +136,7 @@ Feel free to modify the content included in the pages that the template contains
 
 ### Theming
 
-For change the template theme change the `data-theme` atribute of the `<html>` tag in `BaseLayout.astro` file.
+To change the template theme, change the `data-theme` atribute of the `<html>` tag in `BaseLayout.astro` file.
 
 You can chose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
 
@@ -237,22 +153,3 @@ The configuration for the deployment varies depending on the platform where you 
 > **⚠️ CAUTION** </br>
 > The Blog pagination of this template is implemented using dynamic route parameters in its filename and for now this format is incompatible with SSR deploy configs, so please use the default static deploy options for your deployments.
 
-## Contributing
-
-Suggestions and pull requests are welcomed! Feel free to open a discussion or an issue for a new feature request or bug.
-
-One of the best ways of contribute is to grab a [bug report or feature suggestion](https://github.com/manuelernestog/astrofy/issues) that has been marked `accepted` and dig in.
-
-Please be wary of working on issues _not_ marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
-
-## License
-
-Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astrofy/blob/main/LICENSE) file for details.
-
-## Contributors
-
-<a href="https://github.com/manuelernestog/astrofy/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
