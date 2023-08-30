@@ -6,6 +6,7 @@ visit_link: "https://huggingface.co/spaces/thesob/ser-nimble"
 updatedDate: "2023-03-21"
 heroImage: "/images/emotion_feature.webp"
 author: 'Patricio Sobrado'
+badge: "AI"
 image:
   url: 'https://docs.astro.build/assets/full-logo-dark.png'
   alt: 'The full Astro logo.'
