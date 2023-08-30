@@ -1,13 +1,20 @@
 ---
 title: 'Timer'
 description: "Simple half stack React tool to measure elapsed time on a project."
-pubDate: 2023-03-21
-heroImage: "/images/react-logo192.png"
+visit_link_label: "Visit Timer app"
+visit_link: "https://timer-8lb.pages.dev/"
+updatedDate: "2023-03-21"
+badge: ""
+heroImage: "/react_logo192.png"
 author: 'Patricio Sobrado'
 image:
   url: 'https://docs.astro.build/assets/full-logo-dark.png'
   alt: 'The full Astro logo.'
-tags: ['ai', 'freecoursesonline', 'helsinkiuniversity']
+tags: ['react', 'mantine', 'elapsedtime']
 ---
-# Project 1
-bla
+# Timer
+Simple half stack React tool to measure elapsed time on a project. It stores the elapased time in localPageStorage, thus any refresh or browser restart will maintain elapsed time. You can change the project name of the project, and open a separate tab for each task you want to track. You can start the time at any timestamp. Supports nearly any limitation on elapsed time, counter is second based.
+
+# Tech stack
+- [React](https://react.com)
+- [Mantine](https://mantine.dev)
