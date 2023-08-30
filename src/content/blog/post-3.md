@@ -6,7 +6,7 @@ image:
   url: 'https://docs.astro.build/assets/rays.webp'
   alt: 'Thumbnail of Astro rays.'
 pubDate: 2023-04-15
-heroImage: "/images/society_of_mind.png"
+heroImage: "/images/society_of_mind.webp"
 tags: ['astro', 'learning in public', 'setbacks', 'community']
 ---
 # Society of Mind by Marvin Minsky

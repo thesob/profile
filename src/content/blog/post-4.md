@@ -6,7 +6,7 @@ image:
   url: 'https://docs.astro.build/default-og-image.png'
   alt: 'The word “astro” against an illustration of planets and stars.'
 pubDate: 2023-03-22
-heroImage: "/images/learn-js.jpeg"
+heroImage: "/images/learn-js.webp"
 tags: ['javascript', 'freeeducation']
 ---
 

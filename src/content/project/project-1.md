@@ -5,7 +5,7 @@ visit_link_label: "Visit Timer app"
 visit_link: "https://timer-8lb.pages.dev/"
 updatedDate: "2023-03-21"
 badge: ""
-heroImage: "/react_logo192.png"
+heroImage: "/images/react_logo192.webp"
 author: 'Patricio Sobrado'
 image:
   url: 'https://docs.astro.build/assets/full-logo-dark.png'

@@ -6,7 +6,7 @@ image:
   url: 'https://docs.astro.build/assets/arc.webp'
   alt: 'Thumbnail of Astro arcs.'
 pubDate: 2023-07-08
-heroImage: "/images/robots_in_kitchen.jpeg"
+heroImage: "/images/robots_in_kitchen.webp"
 tags: ['AI', 'Chatbots', 'VoiceAssistants', 'FutureTech']
 ---
 
