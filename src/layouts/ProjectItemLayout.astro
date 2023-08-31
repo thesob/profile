@@ -38,11 +38,12 @@ import { Image } from "@astrojs/image/components";
           <div>
             {
               visit_link && (
-                <a class="btn btn-outline grow md:grow-0 ml-4" href={visit_link} target="_blank">
+                <a class="btn btn-outline grow md:grow-0 ml-0" href={visit_link} target="_blank">
                   {visit_link_label}
                 </a>
               )
             }
+            <span class="px-3 text-xs italic text-gray-400">Published on: {displayDate}</span>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ image:
 tags: ['react', 'mantine', 'elapsedtime']
 ---
 # Timer
-Simple half stack React tool to measure elapsed time on a project. It stores the elapased time in localPageStorage, thus any refresh or browser restart will maintain elapsed time. You can change the project name of the project, and open a separate tab for each task you want to track. You can start the time at any timestamp. Supports nearly any limitation on elapsed time, counter is second based.
+Simple half stack React tool to measure elapsed time on a project. It stores the elapased time in local sessionStorage, thus any refresh or browser restart will maintain elapsed time. You can change the project name of the project, and open a separate tab for each task you want to track. You can start the time at any timestamp. Supports nearly any limitation on elapsed time, counter is second based.
 
 # Tech stack
 - [React](https://react.com)

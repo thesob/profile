@@ -9,6 +9,12 @@ const posts = (await getCollection("blog")).sort(
 );
 
 const last_posts = posts.slice(0, 3);
+
+const projects = (await getCollection("project")).sort(
+  (a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf()
+)
+
+const last_projects = projects.slice(0, 3)
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -40,27 +46,21 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
   </div>
 
-  <HorizontalCard
-    title="Timer"
-    img="/images/react_logo192.webp"
-    desc="Simple half stack React tool to measure elapsed time on a project."
-    url="https://timer-8lb.pages.dev/"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Speech Emotion Recognition"
-    img="/images/emotion_feature.webp"
-    desc="A nimble speech emotion recognition classifier, that can recognize 6 emotions (angry, fear, disgust, happy, sad, surprise), apart from neutral."
-    url="https://huggingface.co/spaces/thesob/ser-nimble"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Blog list"
-    img="/images/blog_logo.webp"
-    desc="A user authenticated fullstack blog list app to maintain and like blogs."
-    url="#"
-  />
+  {
+    last_projects.map((project) => (
+      <>
+        <HorizontalCard
+          title={project.data.title}
+          img={project.data.heroImage}
+          desc={project.data.description}
+          url={"/project/" + project.slug}
+          target="_self"
+          badge={project.data.badge}
+        />
+        <div class="divider my-0"/>
+      </>
+    ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
