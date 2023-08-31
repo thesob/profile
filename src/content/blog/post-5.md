@@ -21,7 +21,7 @@ Below you'll find a list of carefully selected sources that I myself have used t
 -	Dive into Deep Learning - [https://d2l.ai/](https://d2l.ai/) 
 
 # Miscellaneous
--	Python official documentation - [https://d2l.ai/] (https://d2l.ai/)
+-	Python official documentation - [https://d2l.ai/](https://d2l.ai/)
 -	Numpy User Guide - [https://numpy.org/doc/stable/index.html](https://numpy.org/doc/stable/index.html) 
 -	Tutorial on HuffingFace and Gradio - [https://www.tanishq.ai/blog/gradio_hf_spaces_tutorial](https://www.tanishq.ai/blog/gradio_hf_spaces_tutorial) 
 -	Introduction to LangChain - [https://python.langchain.com/docs/get_started/introduction.html](https://python.langchain.com/docs/get_started/introduction.html) 
