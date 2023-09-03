@@ -7,6 +7,7 @@ const blogSchema = z.object({
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
     badge: z.string().optional(),
+    tags: z.array(z.string()).optional()
 });
 
 const projectSchema = z.object({
@@ -17,6 +18,7 @@ const projectSchema = z.object({
     updatedDate: z.coerce.date(),
     badge: z.string().optional(),
     heroImage: z.string().optional(),
+    tags: z.array(z.string()).optional()
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;

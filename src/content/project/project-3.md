@@ -5,10 +5,6 @@ visit_link_label: "TBA"
 visit_link: "#"
 updatedDate: "2023-03-21"
 heroImage: "/images/blog_logo.webp"
-author: 'Patricio Sobrado'
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
 tags: ['ai', 'freecoursesonline', 'helsinkiuniversity']
 ---
 # Project 3

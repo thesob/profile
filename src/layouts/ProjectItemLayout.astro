@@ -14,11 +14,14 @@ const {
   badge,
   visit_link,
   visit_link_label,
+  tags,
 } = Astro.props;
+console.log("tags:", tags);
 
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(updatedDate).format("ll");
 import { Image } from "@astrojs/image/components";
+import { map } from "astro/zod";
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -26,7 +29,15 @@ import { Image } from "@astrojs/image/components";
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {
         heroImage && (
-          <Image aspectRatio="16:9" width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
+          <Image
+            aspectRatio="16:9"
+            width={750}
+            height={422}
+            format="webp"
+            src={heroImage}
+            alt={title}
+            class="w-full mb-6"
+          />
         )
       }
       <div class="">
@@ -38,15 +49,32 @@ import { Image } from "@astrojs/image/components";
           <div>
             {
               visit_link && (
-                <a class="btn btn-outline grow md:grow-0 ml-0" href={visit_link} target="_blank">
+                <a
+                  class="btn btn-outline grow md:grow-0 ml-0"
+                  href={visit_link}
+                  target="_blank"
+                >
                   {visit_link_label}
                 </a>
               )
             }
-            <span class="px-3 text-xs italic text-gray-400">Published on: {displayDate}</span>
+            <span class="px-3 text-xs italic text-gray-400"
+              >Published on: {displayDate}</span
+            >
           </div>
         </div>
       </div>
+      {
+        tags && (
+          <div class="flev-wrap space-x-4 my-3">
+            {tags.map((tag) => (
+              <a href="" class="badge badge-lg badge-secondary">
+                {tag}
+              </a>
+            ))}
+          </div>
+        )
+      }
       <div class="divider my-2"></div>
       <slot />
     </article>

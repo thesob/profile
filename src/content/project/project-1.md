@@ -6,11 +6,7 @@ visit_link: "https://timer-8lb.pages.dev/"
 updatedDate: "2023-03-21"
 badge: ""
 heroImage: "/images/react_logo192.webp"
-author: 'Patricio Sobrado'
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
-tags: ['react', 'mantine', 'elapsedtime']
+tags: ['react', 'mantine', 'elapsedtime', 'javascript']
 ---
 
 # Timer
@@ -22,6 +18,8 @@ When working through the MOOC course at Helsinki University for Fullstack JS, up
 # How it was built
 Built with React, thus this is a half-stack app, i.e. only frontend. 
 ![Timer | Elapsed time counter](/images/timer_screenshot_260_500.webp)
+Deployed on [Cloudfare](https://dash.cloudflare.com/) server pages a [Timer](https://timer-8lb.pages.dev/).
+Code repositoy on [Github](https://github.com/thesob/timer)
 
 ## Decisions made
 - Made the UI very simple for usability. To simplify the design work I used the Mantine components, for fast start.
@@ -29,15 +27,15 @@ Built with React, thus this is a half-stack app, i.e. only frontend.
 - The minutes and seconds are limited to 60. The hours have no limits.
 
 ## Packages used
-- mantine core, for components
-- mantine hooks, to handle blrower set timer correctly with React
+- mantine core, for components: Stack, Button, TextInput, Title, Flex, Accordion, Text, Footer.
+- mantine hooks: useInterval, to handle brower settimer function correctly with React, and useForm to handle form validations.
 
 ## Lessons learned
-The use state of the inner elements of the mantine component is not correctly rendered. For example, the lable of the text component does not get updated upon new render, since the label hides the state deep down.
+The use state of the inner elements of the mantine component is not correctly rendered. For example, the lable of the InputText component does not get updated on next render when changing it's value. The value change does not propagate down to the useState value of the hidden property. I suspect it is a bug on the mantine component.
 
-# What to improve or make different next time
-Change the graphics to use a 24 hour clock
+## What to improve or make different next time
+Change the rotating graphic (React logo) when counter is running, to a 24 hours clock face component with handlers for hours, minutes and seconds. Make that graphic a React component. The handlers should be aligned with the digital clock display.
 
-# Tech stack
+## Tech stack
 - [React](https://react.com)
 - [Mantine](https://mantine.dev)
