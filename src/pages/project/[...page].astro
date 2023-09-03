@@ -9,9 +9,24 @@ export async function getStaticPaths({ paginate }) {
   return paginate(items, { pageSize: 10 });
 }
 const { page } = Astro.props;
+const allItems = await Astro.glob('../../content/project/*.md')
+const tags = [... new Set(allItems.map((item) => item.frontmatter.tags).flat())]
+console.log('tags', tags)
 ---
 
 <BaseLayout title="Project" sideBarActiveItemID="project">
+  {
+    tags && (
+      <div class="flev-wrap space-x-3 my-3">
+        {tags.map((tag) => (
+          <a href="" class="badge badge-outline">
+            {tag}
+          </a>
+        ))}
+      </div>
+    )
+  }
+  <div class="divider my-0" />
   <ul>
     {
       page.data.map((item) => (
