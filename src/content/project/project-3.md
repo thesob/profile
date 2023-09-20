@@ -7,5 +7,5 @@ updatedDate: "2023-03-21"
 heroImage: "/images/blog_logo.webp"
 tags: ['ai', 'freecoursesonline', 'helsinkiuniversity']
 ---
-# Project 3
-bla
+# Blog list app
+This is a fullstack app developed in React, node.js, and mongodb to keep hold and maintain a list of favorite blogs. Anyone can vote on a blog, to let it show upper on the list, but only created users can add blogs. For now, no users can be added in the UX
