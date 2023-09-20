@@ -26,7 +26,7 @@ Deployed on [Huggingface Spaces](https://huggingface.co) spaces a [SER-nimble](h
 Code repositoy on [Github](https://huggingface.co/spaces/thesob/ser-nimble)
 
 ## Decisions made
-- Made the UI very simple for usability. The idea was to have a platform where I could easily validate live the accuracy of the trained model.
+- Made the UI very simple for usability. The idea was to have a platform where I could easily validate live the accuracy of the trained model. i.e. using an audio that was not part of the training or test data set.
 
 ## Packages used
 - Keras sequential model
@@ -34,37 +34,23 @@ Model architecture is a multi-layer sequential model using Keras library compone
 
 It's structure is as follows:
 _________________________________________________________________
-| Layer (type) | Output Shape | Param #  |
-| ----------------------- | ----------------------- | -------- |
-| conv1d_12 (Conv1D)          (None, 217, 32)           192       
-                                                                 
- activation_17 (Activation)  (None, 217, 32)           0         
-                                                                 
- max_pooling1d_11 (MaxPooli  (None, 108, 32)           0         
- ng1D)                                                           
-                                                                 
- conv1d_13 (Conv1D)          (None, 108, 64)           10304     
-                                                                 
- activation_18 (Activation)  (None, 108, 64)           0         
-                                                                 
- max_pooling1d_12 (MaxPooli  (None, 54, 64)            0         
- ng1D)                                                           
-                                                                 
- dropout_7 (Dropout)         (None, 54, 64)            0         
-                                                                 
- flatten_4 (Flatten)         (None, 3456)              0         
-                                                                 
- dense_7 (Dense)             (None, 128)               442496    
-                                                                 
- activation_19 (Activation)  (None, 128)               0         
-                                                                 
- dropout_8 (Dropout)         (None, 128)               0         
-                                                                 
- dense_8 (Dense)             (None, 7)                 903       
-                                                                 
- activation_20 (Activation)  (None, 7)                 0         
-                                                                 
-_________________________________________________________________
+
+| Layer (type)             | Output Shape           | Param #    |
+| :----------------------- | :---------------------: | :-------: |
+| conv1d_12 (Conv1D)       |   (None, 217, 32)       |    192    | 
+| activation_17 (Activation) | (None, 217, 32)      |     0      |     
+| max_pooling1d_11 (MaxPooling1D) | (None, 108, 32)  | 0         | 
+| conv1d_13 (Conv1D)      |    (None, 108, 64)        |   10304  |
+| activation_18 (Activation) | (None, 108, 64)       |    0      |
+| max_pooling1d_12 (MaxPooling1D) | (None, 54, 64)        |    0      |
+| dropout_7 (Dropout)    |     (None, 54, 64)      |      0       |
+| flatten_4 (Flatten)     |    (None, 3456)         |     0       |
+| dense_7 (Dense)        |     (None, 128)           |    442496  |
+| activation_19 (Activation) | (None, 128)      |         0       |
+| dropout_8 (Dropout)    |     (None, 128)       |        0       |
+| dense_8 (Dense)        |     (None, 7)          |       903     |
+| activation_20 (Activation) | (None, 7)          |       0       |
+
 Total params: 453895 (1.73 MB)
 Trainable params: 453895 (1.73 MB)
 Non-trainable params: 0 (0.00 Byte)
@@ -73,14 +59,55 @@ Non-trainable params: 0 (0.00 Byte)
 Used TabbedInterface, to combine to interfaces, one for file upload and one for microphone.
 
 - Librosa
-Used to extract MFCC features from training data set, and then to create the input to the model to produce the prediction of the label (emotion).
+Used to extract MFCC features from training data set, and then to create the input to the model to produce the prediction of the label (emotion). Only the first 13 features were used.
 
 ## Lessons learned
 Gradio is an excellent library to both create visual environments for machine learning models, and expose apis for other apps to consume.
-The Nuerolex respository hasn't been maintained since many years ago, and the model is not reproducing the accuracy sustained, 86 %. (It may have to do with an improper use of the model)
+
+The Nuerolex respository hasn't been maintained since many years ago, and the model shared is not reproducing the accuracy sustained, 86 %. (It may have to do with an improper use of the model)
 
 ## What to improve or make different next time
-Retrain a model using CNN transfer learning on spectrogram for the audio data set.
+- Investigate whether the predict call in the Gradio app is calling predict incorrectly:
+    - Since the model was created in 2019, it has an old pickle format version.
+    - The demo code in [link](https://github.com/NeuroLexDiagnostics/train-emotions/blob/master/NeuroLex%20Demo%20Day.ipynb) refers to an output of size 216, when the model clearly states 217
+    - Keras version with which the model was created in 2019 contains a method predict_classes that does not exist in current version (2023), so I used predict_batch instead
+Thus, as can be seen in this predict function below, 
+```
+def predict(filepath):
+    X, sample_rate = librosa.load(
+        filepath,
+        res_type='kaiser_fast',
+        #duration=2.5,
+        sr=22050*2,
+        offset=0.5
+    )
+
+    #convert array into numpy array
+    sample_rate = np.array(sample_rate)
+
+    #calculate MFCC mean
+    mfccs = np.mean(
+        librosa.feature.mfcc(y=X, sr=sample_rate, n_mfcc=13),
+        axis=0)
+
+    #store in temporary variable
+    test_sample_features = mfccs
+
+    #pad and reshape the MFCC feature extraction for input into the model
+    test_sample_features = np.pad(
+        test_sample_features,
+        (0, 217-test_sample_features.shape[0]),
+        'constant'
+    )
+
+    test_sample_features = test_sample_features.reshape(1, 217, 1)
+    probs = model.predict(test_sample_features)
+    #return str(probs) + ' dtype:' + str(probs.dtype) + ' size:' + str(probs.size) + ' shape:' + str(probs.shape)
+ 
+    return {labels[i]: float(probs[0,i]) for i in range(len(labels))}
+
+```
+- Retrain a CNN model, e.g. ResNet50, for transfer learning on spectrograms for the labeled audio data set. It is very similar to what the MFCC does, but relies more on graphical analysis.
 
 ## Tech stack
 - [Keras](https://www.tensorflow.org/api_docs/python/tf/keras)
