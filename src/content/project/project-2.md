@@ -34,9 +34,9 @@ Model architecture is a multi-layer sequential model using Keras library compone
 
 It's structure is as follows:
 _________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- conv1d_12 (Conv1D)          (None, 217, 32)           192       
+| Layer (type) | Output Shape | Param #  |
+| ----------------------- | ----------------------- | -------- |
+| conv1d_12 (Conv1D)          (None, 217, 32)           192       
                                                                  
  activation_17 (Activation)  (None, 217, 32)           0         
                                                                  
@@ -64,7 +64,7 @@ _________________________________________________________________
                                                                  
  activation_20 (Activation)  (None, 7)                 0         
                                                                  
-=================================================================
+_________________________________________________________________
 Total params: 453895 (1.73 MB)
 Trainable params: 453895 (1.73 MB)
 Non-trainable params: 0 (0.00 Byte)
