@@ -2,17 +2,18 @@
 title: 'My AI journey'
 author: 'Patricio Sobrado'
 description: 'Usefull links to learning about AI and ML'
-image:
-  url: 'https://docs.astro.build/default-og-image.png'
-  alt: 'The word “astro” against an illustration of planets and stars.'
 pubDate: 2023-08-31
 heroImage: "/images/ai-journey.webp"
+image:
+  url: 'https://docs.astro.build/assets/full-logo-dark.png'
+  alt: 'The full Astro logo.'
 tags: ['ai', 'freeeducation']
 ---
 In my journey of entering the realm of AI, ML (Machine Learning) and DL (Deep Learning) I've come across several useful resources that have boosted my learning on the subject.
 Below you'll find a list of carefully selected sources that I myself have used to gain more knowledge about a particular domain related to AI.
 
 # Courses
+- Machine Learning with Python-From Linear Models to Deep Learning 2023 (paid for certificate) - [https://learning.edx.org/course/course-v1:MITx+6.86x+3T2023/home](https://learning.edx.org/course/course-v1:MITx+6.86x+3T2023/home)
 -	Course FastAI, Practical Deep Learning for Coders 2022 (free)- [https://course.fast.ai/Resources/book.html](https://course.fast.ai/Resources/book.html) 
 -	Course FastAI, Github repository – [https://github.com/fastai/fastbook](https://github.com/fastai/fastbook)
 -	Course Python Programming, Helsinki University (free)- [https://programming-23.mooc.fi/](https://programming-23.mooc.fi/) 
