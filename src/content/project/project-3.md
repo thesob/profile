@@ -1,7 +1,10 @@
 ---
 title: 'Blog list'
 description: "A user authenticated fullstack blog list app to maintain and like blogs."
+visit_link_label: "Visit Timer app"
+visit_link: "https://timer-8lb.pages.dev/"
 updatedDate: "2023-03-21"
+badge: ""
 heroImage: "/images/blog_logo.webp"
 tags: ['ai', 'freecoursesonline', 'helsinkiuniversity']
 ---
