@@ -2,11 +2,9 @@
 title: 'Unlocking Predictive Power'
 description: 'Lessons from Hedgehogs and Foxes'
 pubDate: 2023-06-21
+updatedDate: 2023-12-29
 heroImage: "/images/elements_of_ai.webp"
-author: 'Patricio Sobrado'
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
+badge: "ai"
 tags: ['ai', 'freecoursesonline', 'helsinkiuniversity']
 ---
 

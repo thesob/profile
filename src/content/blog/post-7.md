@@ -1,12 +1,10 @@
 ---
 title: 'The beauty of Stochastic Gradient Descent (SGD)'
-author: 'Patricio Sobrado'
 description: 'A link to a powerful lecture about stochastic gradient descent method for finding optimal solutions'
 pubDate: 2023-10-15
+updatedDate: 2023-12-29
 heroImage: "/images/SGD_lecture.png"
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
+badge: "ai"
 tags: ['ai', 'freeeducation']
 ---
 Stochastic Gradient Descent (SGD) stands out as the go-to method for tackling optimization problems that involve the summation of individual functions. Its key strength lies in its ability to swiftly converge towards an optimal solution, contingent upon the chosen step size. This approach offers a rapid yet effective means of obtaining estimations that prove sufficiently accurate for practical predictive purposes.

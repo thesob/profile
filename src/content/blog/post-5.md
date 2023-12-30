@@ -1,12 +1,10 @@
 ---
 title: 'My AI journey'
-author: 'Patricio Sobrado'
 description: 'Usefull links to learning about AI and ML'
 pubDate: 2023-08-31
+updatedDate: 2023-12-29
 heroImage: "/images/ai-journey.webp"
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
+badge: "ai"
 tags: ['ai', 'freeeducation']
 ---
 In my journey of entering the realm of AI, ML (Machine Learning) and DL (Deep Learning) I've come across several useful resources that have boosted my learning on the subject.

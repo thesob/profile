@@ -1,12 +1,10 @@
 ---
 title: "🚀 Unveiling the Future of AI Assistants"
-author: "Patricio Sobrado"
 description: "Lessons Learned from Siri, Alexa, and Google Assistant"
-image:
-  url: 'https://docs.astro.build/assets/arc.webp'
-  alt: 'Thumbnail of Astro arcs.'
 pubDate: 2023-07-08
+updatedDate: 2023-12-29
 heroImage: "/images/robots_in_kitchen.webp"
+badge: "ai"
 tags: ['AI', 'Chatbots', 'VoiceAssistants', 'FutureTech']
 ---
 

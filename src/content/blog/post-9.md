@@ -1,12 +1,10 @@
 ---
 title: 'Ever wondered about the power behind Support Vector Machines (SVMs)?'
-author: 'Patricio Sobrado'
 description: 'A recommendation of an MIT lecture where support vector machines are explained in clarity'
 pubDate: 2023-12-19
+updatedDate: 2023-12-29
 heroImage: "/images/SVM.png"
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
+badge: "ai"
 tags: ['ai', 'learning', 'CognitiveEvolution', 'Insights']
 ---
 

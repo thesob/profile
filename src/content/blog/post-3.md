@@ -1,13 +1,11 @@
 ---
 title: "Society of Mind by Marvin Minsky"
-author: 'Patricio Sobrado'
 description: 'A short summary of a an AI pilar'
-image:
-  url: 'https://docs.astro.build/assets/rays.webp'
-  alt: 'Thumbnail of Astro rays.'
 pubDate: 2023-04-15
+updatedDate: 2023-12-29
 heroImage: "/images/society_of_mind.webp"
-tags: ['astro', 'learning in public', 'setbacks', 'community']
+badge: "ai"
+tags: ['ai', 'learning in public', 'setbacks', 'community']
 ---
 # Society of Mind by Marvin Minsky
 Came recently across the book "The Society of Mind" by Marvin Minsky from 1986, and it compels my curiosity to creating intelligent assistants, fit for companionship purposes. The thoughts presented, summarized below, makes me recall psychodynamic psychology as understood by Freud.

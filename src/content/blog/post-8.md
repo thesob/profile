@@ -1,12 +1,10 @@
 ---
 title: 'Unveiling the Power of Learning and AI'
-author: 'Patricio Sobrado'
 description: 'A short reflection about the meaning of the large language models'
 pubDate: 2023-08-31
+updatedDate: 2023-12-29
 heroImage: "/images/new_kind_of_intelligence.png"
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
+badge: "ai"
 tags: ['ai', 'learning', 'CognitiveEvolution', 'LanguageModels', 'HumanIntelligence', 'Insights', 'TechTrends']
 ---
 # Unveiling the Power of Learning and AI

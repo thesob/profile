@@ -1,12 +1,10 @@
 ---
 title: 'Software engineering productivity metrics'
-author: 'Patricio Sobrado'
 description: 'About measuring software developer productivity'
 pubDate: 2023-09-03
+updatedDate: 2023-12-29
 heroImage: "/images/software_developer_productivity.jpeg"
-image:
-  url: 'https://docs.astro.build/assets/full-logo-dark.png'
-  alt: 'The full Astro logo.'
+badge: ""
 tags: ['metrics', 'productivity', 'software engineering']
 ---
 Does software engineering productivity metrics makes sense to you?

@@ -1,12 +1,10 @@
 ---
 title: 'Callbacks in Javascript'
-author: 'Patricio Sobrado'
 description: 'Avoiding the callback hell'
-image:
-  url: 'https://docs.astro.build/default-og-image.png'
-  alt: 'The word “astro” against an illustration of planets and stars.'
 pubDate: 2023-03-22
+updatedDate: 2023-12-29
 heroImage: "/images/learn-js.webp"
+badge: "JS"
 tags: ['javascript', 'freeeducation']
 ---
 
