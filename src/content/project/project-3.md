@@ -1,7 +1,7 @@
 ---
 title: 'Blog list'
 description: "A user authenticated fullstack blog list app to maintain and like blogs."
-visit_link_label: "Visit Timer app"
+visit_link_label: "Visit Bloglist app"
 visit_link: "https://bloglist-redux.fly.dev/"
 updatedDate: "2023-03-21"
 badge: "React"
