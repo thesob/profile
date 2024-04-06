@@ -1,7 +1,7 @@
 ---
-title: 'Timer'
+title: 'Time counter'
 description: "Simple half stack React tool to measure elapsed time on a project."
-visit_link_label: "Visit Timer app"
+visit_link_label: "Visit Time counter app"
 visit_link: "https://timer-8lb.pages.dev/"
 updatedDate: "2023-03-21"
 badge: "React"
@@ -9,7 +9,7 @@ heroImage: "/images/react_logo192.webp"
 tags: ['react', 'mantine', 'elapsedtime', 'javascript']
 ---
 
-# Timer
+# Time counter
 Simple tool to measure elapsed time on a project or task. It stores the elapased time in local sessionStorage, thus any refresh or browser restart will maintain elapsed time. You can change the project name of the project, and open a separate tab for each project you want to track. You can set the start time too, and  nearly no limitation on elapsed time. The counter is second based.
 
 # Why
@@ -17,8 +17,8 @@ When working through the MOOC course at Helsinki University for Fullstack JS, up
 
 # How it was built
 Built with React, thus this is a half-stack app, i.e. only frontend. 
-![Timer | Elapsed time counter](/images/timer_screenshot_260_500.webp)
-Deployed on [Cloudfare](https://dash.cloudflare.com/) server pages a [Timer](https://timer-8lb.pages.dev/).
+![Time counter | Elapsed time counter](/images/timer_screenshot_366_652.webp)
+Deployed on [Cloudfare](https://dash.cloudflare.com/) server pages a [Time counter](https://timer-8lb.pages.dev/).
 Code repositoy on [Github](https://github.com/thesob/timer)
 
 ## Decisions made
