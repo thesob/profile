@@ -5,7 +5,7 @@ visit_link_label: "Visit Time counter app"
 visit_link: "https://timer-8lb.pages.dev/"
 updatedDate: "2023-03-21"
 badge: "React"
-heroImage: "/images/react_logo192.webp"
+heroImage: "/images/24_hour_clock.webp"
 tags: ['react', 'mantine', 'elapsedtime', 'javascript']
 ---
 
