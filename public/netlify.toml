@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/timer/*"
+  from = "/timer"
   to = "https://timer-8lb.pages.dev/"
   status = 200
   force = true
