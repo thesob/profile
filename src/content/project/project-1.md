@@ -1,15 +1,15 @@
 ---
-title: 'Time counter'
+title: 'Stopwatch'
 description: "Simple half stack React tool to measure elapsed time on a project."
 visit_link_label: "Visit Time counter app"
 visit_link: "https://timer-8lb.pages.dev/"
 updatedDate: "2023-03-21"
 badge: "React"
 heroImage: "/images/24_hour_clock.webp"
-tags: ['react', 'mantine', 'elapsedtime', 'javascript']
+tags: ['react', 'mantine', 'stopwatch', 'javascript']
 ---
 
-# Time counter
+# Stopwatch
 Simple tool to measure elapsed time on a project or task. It stores the elapased time in local sessionStorage, thus any refresh or browser restart will maintain elapsed time. You can change the project name of the project, and open a separate tab for each project you want to track. You can set the start time too, and  nearly no limitation on elapsed time. The counter is second based.
 
 # Why
